@@ -32,7 +32,7 @@ def gradient(weight, xs, ys):
 
 
 weight = 0.0  # initial weight
-learning_rate = 0.01
+learning_rate = 0.01 
 for epoch in range(1, 50):
     grad = gradient(weight, xs, ys)
     weight -= learning_rate * grad
