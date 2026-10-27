@@ -9,7 +9,7 @@ print(M)
 print(M.shape)
 
 
-matrix=np.zeros((6,2))   # create 2d array with zeros and np.empty((r,c)) creats empty 2d array.
+matrix=np.zeros((6,2)) # create 2d array with zeros and np.empty((r,c)) creats 2d array with random values from the memory.
 n=len(matrix)
 print(n)
 for i in range(n):

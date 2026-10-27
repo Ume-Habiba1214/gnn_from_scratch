@@ -42,3 +42,25 @@ D_inv_sqrt = np.diag(1 / np.sqrt(deg))
 A_norm = D_inv_sqrt @ A_hat @ D_inv_sqrt
 print(A_norm)
 print(np.allclose(A_norm, A_norm.T))
+W1 = np.array([[1, -1, 0],
+              [0, 1, -1]])        # shape (2, 3)
+
+
+
+
+def gcn_layer(A_norm, H , W):
+    Z=A_norm @ H @ W
+    relu=np.maximum(0, Z)
+    return relu
+    
+
+
+H1 = gcn_layer(A_norm, X, W1)
+
+W2 = np.array([[1, 0],
+               [1, 1],
+               [0, 1]])
+
+H2= gcn_layer( A_norm,H1,W2 )
+print(H2)
+print(H2.shape)
